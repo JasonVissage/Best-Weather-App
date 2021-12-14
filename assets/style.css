@@ -1,10 +1,10 @@
 
 
-#header, #searchBtn {
-    background-image: linear-gradient(to bottom right, blue, lightblue);
+#header, #searchBtn, #head-h1{
+    background-image: linear-gradient(to bottom right, #691BC7, #1822FF);
     color: whitesmoke;
 }
 
-#searchArea{
-    margin: 10px;
+#searchArea, #fiveDay{
+    margin: 15px;
 }
