@@ -11,17 +11,26 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header class="bg-dark bg-gradient text-center text-white p-3">
-        <h1>Weather Dashboard</h1>
+
+    <header id="header" class="container-fluid text-center text-white p-3">
+        <h1>Weather You Win or Lose</h1>
     </header>
-    <h3>Search for a City:</h3>
-    <div class="col-12 col-md-4">
-        <form id="city-search" class="border"></form>
-        <input type="text" placeholder="ex. Dallas">
-        <button class="primary-btn" type="submit">Search</button>
+
+    <div id="searchArea" class="d-grid col-4 col-md-4">
+        <h3 id="searchH3" class="">Search for a City:</h3>
+            <!-- <form id="city-search" class="border"></form> -->
+            <input type="text" placeholder="ex. Dallas" class="m-1 rounded">
+            <!-- <br> -->
+            <button id="searchBtn" class="m-1 rounded" type="submit">Search</button>
     </div>
 
+    <div id="cities"></div>
+    <div id="currentForecast"></div>
 
+    <div id="fiveDay"></div>
+    <!-- Moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- JavaScript -->
     <script src="./assets/script.js"></script>
 </body>
 </html>

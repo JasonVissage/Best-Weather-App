@@ -1,0 +1,10 @@
+
+
+#header, #searchBtn {
+    background-image: linear-gradient(to bottom right, blue, lightblue);
+    color: whitesmoke;
+}
+
+#searchArea{
+    margin: 10px;
+}
