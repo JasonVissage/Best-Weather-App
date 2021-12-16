@@ -15,30 +15,35 @@
     <header id="header" class="container-fluid text-center text-white p-3">
         <h1 id="head-h1">Weather You Win or Lose</h1>
     </header>
-    <div class="col-12">
+    
 <!-- search field and button -->
+<main>
+    <div class="col-12">
         <div id="searchArea" class="d-grid col-4 col-md-4">
             <h3 id="searchH3" class="fw-bold">Search for a City:</h3>
-                <form id="citySearch" class="d-grid">
+                <form id="citySearchForm" class="d-grid">
                     <input id="searchField" type="text" placeholder="ex. Dallas" class="m-1 rounded">
                     <button id="searchBtn" class="m-1 rounded" type="submit">Search</button>
                 </form>
         </div>
+
 <!-- large box for current weather -->
+
         <div id="display" class="border border-dark p-4 col-8">
-            <h3 id="cityName">City</h3>
-            <p id="temp">Temp</p>
-            <p id="wind">Wind</p>
-            <p id="humid">Humidity</p>
-            <p id="uv">UV-Index</p>
+            <h3 id="city"></h3>
+            <p id="temp"></p>
+            <p id="wind"></p>
+            <p id="humid"></p>
+            <p id="uv"></p>
         </div>
     </div>
+</main>
+
 <!-- list of previously searched cities -->
+
     <div id="cities">
         <h3 class="col-4 col-md-4"></h3>
     </div>
-
-    <div id="currentForecast"></div>
 
     <div id="fiveDay" class="col-4 col-n-4">
         <h3>5 Day Forecast</h3>
