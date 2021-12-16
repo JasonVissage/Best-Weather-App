@@ -56,7 +56,10 @@ var getWeather = function(lat, lon) {
             res.json()
             .then(function(data) {
                 console.log(data)
-                tempEl.innerHTML = `<h1>${data.current.temp}</h1>`
+                tempEl.textContent = "Temp: " + data.current.temp + "°F"
+                windEl.textContent = "Wind: " + data.current.wind_speed + " mph"
+                humidEl.textContent = "Humidity: " + data.current.humidity + "%"
+                uvEl.textContent = "UV Index: " + data.current.uv
                 // put city, lat and lon in parameters in function. 
                 // plug in getWeather into getCity
                 // plug in getCity into click event
