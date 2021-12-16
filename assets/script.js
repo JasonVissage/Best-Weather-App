@@ -10,23 +10,24 @@ var citySearchFormEl = document.querySelector("#citySearchForm");
 var currentDay = new Date;
 
 // api add in's
-// var cityName = "Dallas"
-// var lat = "32.7767"
-// var long = "-96.7970"
+var cityName = "Dallas"
+
 
 // api info
 var apiKey = "09fdfda92faacaa82f0791b49a497abf"
 
-
-
 // pulls weather in
 var getWeather = function() {
-    var apiOneUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&units=imperial&appid=" + apiKey
+    var lat = data.coord[0].lat;
+var lon = data.coord[0].lon;
+console.log(lon,lat)
+    var apiOneUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&units=imperial&appid=" + apiKey;
     fetch(apiOneUrl)
     .then(res => {
         if (res.ok) {
             res.json()
-            .then(function(city, lat, long) {
+            .then(function(data) {
+                
                 // put city, lat and lon in parameters in function. 
                 // plug in getWeather into getCity
                 // plug in getCity into click event
@@ -35,7 +36,7 @@ var getWeather = function() {
         }
     })
 };
-
+// getWeather()
 
 // pulls city
 var getCity = function() {
@@ -45,8 +46,7 @@ var getCity = function() {
         if (res.ok) {
             res.json()
             .then(function(data) {
-            console.log(data.coord.lon)
-
+            // console.log(data.coord.lon)
             
             })
         }
