@@ -7,7 +7,8 @@ var windEl = document.querySelector("#wind");
 var humidEl = document.querySelector("#humid");
 var uvEl = document.querySelector("#uv");
 var citySearchFormEl = document.querySelector("#citySearchForm");
-var currentDay = new Date;
+var currentDate = new Date()
+var iconEl = document.createElement("img")
 
 // api add in's
 
@@ -32,7 +33,6 @@ var getCity = function(cityName) {
         if (res.ok) {
             res.json()
             .then(function(data) {
-                
                 city.innerHTML = cityName
                 getWeather(data.coord.lat, data.coord.lon)
             
@@ -48,8 +48,7 @@ var getCity = function(cityName) {
 
 // pulls weather in
 var getWeather = function(lat, lon) {
-
-    var apiOneUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + apiKey;
+    var apiOneUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + apiKey;
     fetch(apiOneUrl)
     .then(res => {
         if (res.ok) {
@@ -59,7 +58,8 @@ var getWeather = function(lat, lon) {
                 tempEl.textContent = "Temp: " + data.current.temp + "°F"
                 windEl.textContent = "Wind: " + data.current.wind_speed + " mph"
                 humidEl.textContent = "Humidity: " + data.current.humidity + "%"
-                uvEl.textContent = "UV Index: " + data.current.uv
+                uvEl.textContent = "UV Index: " + data.current.uvi
+                
                 // put city, lat and lon in parameters in function. 
                 // plug in getWeather into getCity
                 // plug in getCity into click event
