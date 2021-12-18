@@ -8,3 +8,9 @@
 #searchArea, #fiveDay{
     margin: 15px;
 }
+
+.weatherIcon {
+    max-width:15%;
+    height:auto;
+}
+
