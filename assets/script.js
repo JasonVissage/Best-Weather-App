@@ -73,15 +73,17 @@ var getWeather = function(cityName, lat, lon) {
                     var containerEl = document.createElement("div")
                     var fiveDateEl = document.createElement("h3")
                     var fiveIconEl = document.createElement("img")
+                    fiveIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherIcon + ".png");
                     var fiveTempEl = document.createElement("p")
                     var fiveWindEl = document.createElement("p")
                     var fiveHumidEl = document.createElement("p")
+                    containerEl.setAttribute("id", "containerId")
 
                     fiveDateEl.innerHTML = fiveDayDate
-                    fiveIconEl.innerHTML = fiveDayIcon
+                    fiveIconEl.innerHTML = fiveIconEl
                     fiveTempEl.innerHTML = "Current Temp: " + fiveDayTemp + "°F"
                     fiveWindEl.innerHTML = "Wind: " + fiveDayWind + " mph"
-                    fiveHumidEl.innerHTML = "Humidty: " + fiveDayHumid + "%"
+                    fiveHumidEl.innerHTML = "Humidity: " + fiveDayHumid + "%"
 
 
                     // append all elements onto page below. Use Append, not append Child. 
